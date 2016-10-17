@@ -8,6 +8,7 @@ import { EditTaskComponent } from './edit-task.component';
 import { NewTaskComponent } from './new-task.component';
 import { FilterTaskComponent } from './filter-task.component';
 import { CompletenessPipe } from './completeness.pipe';
+import { CategoryPipe } from './category.pipe';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { CompletenessPipe } from './completeness.pipe';
     EditTaskComponent,
     NewTaskComponent,
     FilterTaskComponent,
-    CompletenessPipe
+    CompletenessPipe,
+    CategoryPipe
   ],
   bootstrap:    [ AppComponent ]
 })
