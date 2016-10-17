@@ -5,7 +5,7 @@ import { Task } from './task.model';
   selector: 'new-task',
   template: `
     <div class="well" id="new-task">
-      <h1>New Task</h1>
+      <h1 class="text-center">New Task</h1>
       <form>
         <div class="form-group">
           <label>Enter Task Description:</label>
@@ -31,7 +31,7 @@ import { Task } from './task.model';
           <label>Enter Task ID:</label>
           <input #newId>
           <button (click)="
-            addClicked(newDescription.value, newId.value);
+            addClicked(newDescription.value, newPriority.value, newCategory.value, newId.value);
             newDescription.value='';
             newId.value='';
           ">Add</button>

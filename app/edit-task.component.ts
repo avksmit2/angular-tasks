@@ -5,7 +5,7 @@ import { Task } from './task.model';
   selector: 'edit-task',
   template: `
     <div *ngIf="childSelectedTask">
-      <h1>Edit Task</h1>
+      <h1 class="text-center">Edit Task</h1>
       <div>
         <div class="form-group">
           <label>Edit Task Description:</label>
@@ -32,7 +32,7 @@ import { Task } from './task.model';
         <div class="checkbox">
           <label><input type="checkbox" [(ngModel)]="childSelectedTask.done">Task Complete</label>
         </div>
-        <button (click)="doneClicked()">Done</button>
+        <button (click)="doneClicked()">Done Editing</button>
       </div>
     </div>
   `
