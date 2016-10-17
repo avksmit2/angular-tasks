@@ -7,12 +7,31 @@ import { Task } from './task.model';
     <div *ngIf="childSelectedTask">
       <h1>Edit Task</h1>
       <div>
-        <label>Enter Task Description:</label>
-        <input [(ngModel)]="childSelectedTask.description">
+        <div class="form-group">
+          <label>Edit Task Description:</label>
+          <input [(ngModel)]="childSelectedTask.description" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Edit Task Priority:</label>
+          <select [(ngModel)]="childSelectedTask.priority">
+            <option>High</option>
+            <option>Normal</option>
+            <option>Low</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Edit Task Category:</label>
+          <select [(ngModel)]="childSelectedTask.category">
+            <option>Work</option>
+            <option>Home</option>
+            <option>Hobby</option>
+          </select>
+        </div>
       </div>
       <div>
-        <label>Enter Task ID:</label>
-        <input [(ngModel)]="childSelectedTask.id">
+        <div class="checkbox">
+          <label><input type="checkbox" [(ngModel)]="childSelectedTask.done">Task Complete</label>
+        </div>
         <button (click)="doneClicked()">Done</button>
       </div>
     </div>

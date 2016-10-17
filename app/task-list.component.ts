@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter }  from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from './task.model';
 
 @Component({
   selector: 'task-list',
   template: `
     <div *ngFor="let currentTask of childTaskList">
-      <h3>{{ currentTask.description }}</h3>
+      <h3>{{ currentTask.description }} (Priority: {{ currentTask.priority }})</h3>
       <button (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
     </div>
   `
