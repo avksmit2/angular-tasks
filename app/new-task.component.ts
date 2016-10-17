@@ -4,7 +4,6 @@ import { Task } from './task.model';
 @Component({
   selector: 'new-task',
   template: `
-    <div class="well" id="new-task">
       <h1 class="text-center">New Task</h1>
       <form>
         <div class="form-group">
@@ -37,7 +36,6 @@ import { Task } from './task.model';
           ">Add</button>
         </div>
       </form>
-    </div>
   `
 })
 

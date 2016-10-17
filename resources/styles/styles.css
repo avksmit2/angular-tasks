@@ -1,7 +1,11 @@
-#new-task {
+.edit-new {
   margin-top: 10%;
 }
 
+.filterLists {
+  border: dotted;
+  padding: 5%;
+}
 .filter {
   margin-top: 20px;
   margin-bottom: 20px;

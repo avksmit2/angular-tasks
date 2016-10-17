@@ -9,14 +9,20 @@ import { Task } from './task.model';
     <task-list
       [childTaskList]="masterTaskList"
       (clickSender)="showDetails($event)"
-     ></task-list>
-    <edit-task
-      [childSelectedTask]="selectedTask"
-      (doneClickedSender)="finishedEditing()"
-    ></edit-task>
-    <new-task
-      (newTaskSender)="addTask($event)"
-    ></new-task>
+    ></task-list>
+    <div class="row well edit-new">
+      <div class="col-sm-6">
+        <new-task
+          (newTaskSender)="addTask($event)"
+        ></new-task>
+      </div>
+      <div class="col-sm-6">
+        <edit-task
+          [childSelectedTask]="selectedTask"
+          (doneClickedSender)="finishedEditing()"
+        ></edit-task>
+      </div>
+    </div>
   </div>
   `
 })
